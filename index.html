@@ -11,28 +11,6 @@
         <link href="./index_files/css2" rel="stylesheet">
         <title>KAALEE — Creative Design, Printing &amp; Packaging</title>
     <script defer="" src="./index_files/bundle.js.download"></script><script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    // Look every half second for the React layout to finish rendering
-    const fixLogos = setInterval(() => {
-      const headerImg = document.querySelector('nav img, .navbar img, header img');
-      const footerImg = document.querySelector('footer img');
-      
-      if (headerImg) {
-        headerImg.src = './kaalee-mark.png';
-        headerImg.srcset = './kaalee-mark.png'; // Clears any retina responsive versions
-      }
-      if (footerImg) {
-        footerImg.src = './kaalee-logo.png';
-        footerImg.srcset = './kaalee-logo.png';
-      }
-      
-      // Stop checking once both images are updated successfully
-      if (headerImg && footerImg) clearInterval(fixLogos);
-    }, 500);
-  });
-</script>
-
             if(window.self!==window.top){
   var s=document.createElement("script");s.src="/visual-edit-overlay.js";document.head.appendChild(s);
   window.tailwind=window.tailwind||{};tailwind.config={corePlugins:{preflight:false}};var t=document.createElement("script");t.src="https://cdn.tailwindcss.com";document.head.appendChild(t);
