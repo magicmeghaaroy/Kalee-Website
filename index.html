@@ -16,6 +16,27 @@
   window.tailwind=window.tailwind||{};tailwind.config={corePlugins:{preflight:false}};var t=document.createElement("script");t.src="https://cdn.tailwindcss.com";document.head.appendChild(t);
 }
 </script>
+        <style>
+  /* Force the header logo element to show your text logo */
+  header img, nav img, .navbar img, img[alt*="KAALEE"] {
+      content: url('./kaalee-logo.png') !important;
+      display: inline-block !important;
+      visibility: visible !important;
+      height: 40px !important;
+      width: auto !important;
+      object-fit: contain !important;
+  }
+  /* Force the footer logo element to show your text logo */
+  footer img {
+      content: url('./kaalee-logo.png') !important;
+      display: inline-block !important;
+      visibility: visible !important;
+      height: 45px !important;
+      width: auto !important;
+      object-fit: contain !important;
+  }
+</style>
+
 <style>*, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
