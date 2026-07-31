@@ -5532,6 +5532,31 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
     integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ=="
     data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;7f7b0fd8732c4326aae4b9d58d5c514a&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}"
     crossorigin="anonymous"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    // Intercept React rendering updates dynamically every 200 milliseconds
+    const forceAboutSectionMark = setInterval(() => {
+      // Find the specific image element within the unique about-section node
+      const targetImg = document.querySelector('[data-testid="about-section"] img, #about img');
+      
+      if (targetImg) {
+        // Enforce direct paths straight from your working root repository folder assets
+        targetImg.removeAttribute('srcset'); // Wipes any responsive multi-density layout scales
+        targetImg.src = './index_files/kaalee-mark.png'; 
+        
+        // Apply inline presentation overrides to prevent layout zeroing out
+        targetImg.style.setProperty('display', 'block', 'important');
+        targetImg.style.setProperty('visibility', 'visible', 'important');
+        targetImg.style.setProperty('width', '112px', 'important');
+        targetImg.style.setProperty('height', '112px', 'important');
+        targetImg.style.setProperty('opacity', '0.9', 'important');
+        
+        // Kill the timer thread once the object is verified and working on the user interface
+        clearInterval(forceAboutSectionMark);
+      }
+    }, 200);
+  });
+</script>
 
 
 </body>
